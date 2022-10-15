@@ -1,0 +1,53 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0 34px;
+    border-bottom: 1px solid #E4E9F2;
+    width: auto;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 90px;
+}
+.header__container{
+    padding: 0 165px;
+}
+
+.header .links{
+    display: flex;
+    align-items: center;
+    gap: 56.5px
+}
+.header .links ul{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.header .avacart{
+ display: flex;
+ align-items: center;
+ gap: 46.18px;
+ position: relative;  
+}
+.header .avacart .avatar{
+  height: 50px;
+  border-radius: 50%;
+}
+.header .avacart .cartcount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 10px;
+    background: #FF7E1B;
+    width: 19px;
+    height: 13px;
+    border-radius: 6.5px;
+    position: absolute;
+    bottom: 33px;
+    left: 2px;
+}
+.header .avacart .avatar:hover{
+    border: 2px solid #FF7E1B;
+  
+}
