@@ -26,8 +26,10 @@ function Body(props) {
       <h1>Sneaker Company</h1>
        <h2>Fall Limited Edition Sneakers</h2>
        <p className='comment'>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+       <div className='amount'>
         <p className='price'>${p.price}<span>50%</span></p>
         <span className='oldprice'>$250.00</span>
+        </div>
         <div className="addtocart">
         <div className="quantity">
         <img src={minus} onClick={() => {if(p.count > 0) props.setDecreament()}} alt='minus' />{p.count}<img src={plus} onClick={props.setIncreament} alt='plus' />

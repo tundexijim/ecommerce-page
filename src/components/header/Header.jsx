@@ -6,6 +6,7 @@ import './header.css'
 import {useCart} from 'react-use-cart'
 function Header(props) {
   const [showcart, Setshowcart] = useState(false);
+  const [showmenu, Setshowmenu] = useState(false)
   const {items, isEmpty} = useCart();
   const ref = useRef();
   useEffect(() => {
@@ -22,11 +23,11 @@ function Header(props) {
   return (
     <div className="header__container">
     <div className='header'>
-      <div className="links">
-    <div className="logo">
+    <div className="links">
+    <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg" onClick={()=>Setshowmenu(true)}><path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd"/></svg>
     <img src={logo} alt='img' />
-    </div>
-    <ul className='menu'>
+    <ul className={showmenu ? 'menu' : 'menu hide'}>
+    <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg" onClick={()=>Setshowmenu(false)}><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>
     <li><a href='#'>Collections</a></li>
     <li><a href='#'>Men</a></li>
     <li><a href='#'>Women</a></li>

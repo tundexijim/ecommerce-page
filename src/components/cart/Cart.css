@@ -50,3 +50,11 @@ margin-left: 24px;
   text-align: center;
   margin-top: 77px;
 }
+
+@media screen and (max-width: 375px){
+.cart__container{
+    z-index: 1;
+    right: 8px;
+    
+}
+}

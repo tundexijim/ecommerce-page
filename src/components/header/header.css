@@ -12,13 +12,16 @@
 .header__container{
     padding: 0 165px;
 }
+.header svg{
+    display: none;
+}
 
 .header .links{
     display: flex;
     align-items: center;
     gap: 56.5px
 }
-.header .links ul{
+.header .links .menu{
     display: flex;
     align-items: center;
     gap: 32px;
@@ -27,11 +30,14 @@
  display: flex;
  align-items: center;
  gap: 46.18px;
- position: relative;  
+ /* position: relative;   */
 }
 .header .avacart .avatar{
   height: 50px;
   border-radius: 50%;
+}
+.header .avacart .avatar:hover{
+    border: 2px solid #FF7E1B;
 }
 .header .avacart .cartcount{
     display: flex;
@@ -43,11 +49,46 @@
     width: 19px;
     height: 13px;
     border-radius: 6.5px;
-    position: absolute;
-    bottom: 33px;
-    left: 2px;
 }
-.header .avacart .avatar:hover{
-    border: 2px solid #FF7E1B;
-  
+@media screen and (max-width: 375px){
+.header svg{
+    display: block;
+}
+.header{
+    border: none;
+    padding: 19px 0 25px;
+    margin-bottom: 0;
+}
+.header__container{
+    padding: 0 24px;
+
+}
+.header .links .menu{
+  flex-direction: column;
+  background: #ffffff;
+  height: 970px;
+  width:250px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  gap: 20px;
+  align-items:flex-start;
+  padding-left: 25px;
+  color: #1D2026;
+  font-weight: 700;
+  transition: 2s ease;
+  z-index: +1;
+}
+.header .links .menu.hide{
+    left: -250px;
+}
+.header .links .menu svg{
+    margin: 24.78px 0 53.78px
+}
+.header .links{
+    gap: 16px;
+}
+.header .avacart{
+    gap: 22.18px;
+}
 }

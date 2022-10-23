@@ -31,17 +31,13 @@
 .body__container .imgcontainer img:hover{
     opacity: 0.5;
 }
-.body__container .imgcontainer .thumbnail::after{
-    content: "";
-    opacity: 0.3;
-    border: 2px solid #FF7E1B;
-}
 .body__container .text h1{
 color: #FF7E1B;
 text-transform: uppercase;
 font-size: 13px;
 font-weight: 700;
-margin-bottom: 27px;}
+margin-bottom: 27px;
+}
 .body__container .text h2{
 font-size: 44px;
 line-height: 48px;
@@ -51,6 +47,7 @@ margin-bottom: 32px;
     font-size: 16px;
     line-height: 26px;
     margin-bottom: 28px;
+    color: #69707D;
 }
 .body__container .text .price{
    font-size: 28px;
@@ -84,17 +81,13 @@ text-decoration: line-through;
     color: #ffffff;
     cursor: pointer;
 }
-.body__container .text .addtocart button img{
-    width: 17.46px;
-    height: 16px;
-    filter: opacity(1) drop-shadow(0 0 0 #ffffff);
-}
 .body__container .text .quantity{
     display: flex;
     align-items: center;
-    gap: 45px;
+    justify-content: space-between;
+    gap: 45.5px;
     background: #F6F8FD;
-    padding: 5px 15px;
+    padding: 22px;
     border-radius: 10px;
 
 }
@@ -153,6 +146,72 @@ text-decoration: line-through;
 .body__container .layover path:hover {
     fill:#FF7E1B;
 }
-.body__container .layovergallery{
- 
+
+@media screen and (max-width: 375px){
+.body__container .layover{
+    display: none;
+}
+.body__container{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 24px;
+}
+.body__container .selected{
+    height: 300px;
+    width: 375px;
+    border-radius: unset;
+   
+}
+.body__container .imgcontainer{
+    display: none;
+}
+.selectedimg .previous{
+display: block;
+background: #ffffff;
+padding: 10px;
+border-radius: 50%;
+position: absolute;
+left: 16px;
+
+}
+.selectedimg .next{
+display: block;
+background: #ffffff;
+padding: 10px;
+border-radius: 50%;
+position: absolute;
+right: 16px;
+}
+.body__container .text h1{
+    font-size: 12px;
+    margin-bottom: 19px;
+}
+.body__container .text{
+    padding: 0 24px;
+}
+.body__container .text h2{
+    font-size: 28px;
+    width: 80%;
+    line-height: 32px;
+    margin-bottom: 15px;
+}
+.body__container .text .comment{
+    font-size: 15px;
+    line-height: 25px;
+    width: 327px;
+    margin-bottom: 24px;
+}
+.body__container .text .amount{
+    display: flex;
+    align-items: center;
+    gap: 98px;
+}
+.body__container .text .addtocart{
+    flex-direction: column;
+    margin: 24px 0 88px;
+}
+.body__container .text .quantity{
+    height: 56px;
+}
 }
